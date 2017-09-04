@@ -32,5 +32,11 @@ async def on_message(message):
     if message.content.startswith('S>ping'):
         await client.send_message(message.channel, 'Pong!')
 
+@client.event
+async def on_message(message):
+    if message.content.startswith('S>flipcoin'):
+        flipcoin = random.choice(['Head', 'Tail'])
+        await client.send_message(message,channel, flipcoin)
+
 client.run('token')
 
