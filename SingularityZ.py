@@ -3,8 +3,6 @@ import asyncio
 import random
 import pickle
 import os
-import youtube_dl
-import functools
 
 client = discord.Client()
 
