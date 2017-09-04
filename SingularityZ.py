@@ -27,5 +27,10 @@ async def on_message(message):
         await asyncio.sleep(5)
         await client.send_message(message.channel, 'Done sleeping')
 
+@client.event
+async def on_message(message):
+    if message.content.startswith('S>ping'):
+        await client.send_message(message.channel, 'Pong!')
+
 client.run('token')
 
