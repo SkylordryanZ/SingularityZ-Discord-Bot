@@ -3,6 +3,8 @@ import asyncio
 import random
 import pickle
 import os
+import youtube_dl
+import functools
 
 client = discord.Client()
 
@@ -28,5 +30,7 @@ async def on_message(message):
         await client.send_message(message.channel, 'Done sleeping')
 
 client.run('token')
+
+
 
     
