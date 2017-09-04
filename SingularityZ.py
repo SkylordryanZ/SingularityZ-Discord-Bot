@@ -27,10 +27,6 @@ async def on_message(message):
         await asyncio.sleep(5)
         await client.send_message(message.channel, 'Done sleeping')
 
-@bot.command()
-async def hello():
-    await bot.say ("Heyoooo!")
-
 client.run('token')
 
     
